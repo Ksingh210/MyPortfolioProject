@@ -61,13 +61,7 @@
             Your Request:
         </h2>
         <h5>
-            Store: {{ store }}
-            <br>
-            {{ item1 }} - {{ soil1pallets }} pallets
-            <br>
-            {{ item2 }} - {{ soil2pallets }} pallets
-            <br>
-            {{ item3 }} - {{ soil3pallets }} pallets
+            {% for key,value in order_placed.items %}{{ key }} : {{ value }}<br>{% endfor %}
         </h5>
       </div>
   </section>
