@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jobs.apps.JobsConfig',
     'blog.apps.BlogConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'myportfoliodb',
         'USER': 'postgres',
-        'PASSWORD': 'django123',
+        'PASSWORD': 'multani7',
         'HOST': 'localhost',
         'PORT': '5432',
     }
