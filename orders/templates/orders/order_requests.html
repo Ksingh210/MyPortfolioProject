@@ -3,7 +3,7 @@
 <html lang="en">
    {% load staticfiles %}
   <head>
-    <title>Starter Template · Bootstrap</title>
+    <title>Order Request</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
 
@@ -58,12 +58,14 @@
   <section class="text-left">
       <div class="starter-template">
         <h5>
-            Store Number:
-            <form action="{% url 'ordersubmitted' %}">
-                <textarea cols="15" rows="1" name="store_number"></textarea><br>
-                <input type="checkbox" name="soil1" value="Garden Soil"> Garden Soil  -  <textarea cols="2" rows="1" name="soil1pallets"></textarea> pallets<br>
-                <input type="checkbox" name="soil2" value="Potting Mix"> Potting Mix  -  <textarea cols="2" rows="1" name="soil2pallets"></textarea> pallets<br>
-                <input type="checkbox" name="soil3" value="Raised Bed"> Raised Bed  -  <textarea cols="2" rows="1" name="soil3pallets"></textarea> pallets<br><br>
+            <form action="{% url 'orders' %}" method="POST">
+                {% csrf_token %}
+                Store Number: <br>{{ form.store }} <br><br>
+                Time(mm/dd/yyyy): <br>{{ form.time }}<br><br>
+                {{ form.gardensoil }}  Garden Soil  <br>
+                {{ form.pottingmix }}  Potting Mix<br>
+                {{ form.raisedbed }}  Raised Bed<br>
+                <br>
                 <input type="submit" value="Submit"/>
             </form>
         </h5>

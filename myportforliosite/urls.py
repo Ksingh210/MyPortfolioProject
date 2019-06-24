@@ -26,6 +26,5 @@ urlpatterns = [
     path('', jobs.views.home, name='home'),
     path('blog/', include('blog.urls')),
     path('blog/', blog.views.allblogs, name='blog'),
-    path('orders/', orders.views.orderrequest, name='orders'),
-    path('ordersubmitted/', orders.views.ordersubmitted, name='ordersubmitted'),
+    path('orders/', orders.views.orderdetails, name='orders'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
