@@ -5,5 +5,16 @@ class Orderform(forms.ModelForm):
 
     class Meta:
         model = Order
-        fields = ('store','time', 'gardensoil', 'pottingmix', 'raisedbed')
-        labels = {'store': 'Store', 'time':'Time', 'gardensoil':'Garden Soil', 'pottingmix':'Potting Mix', 'raisedbed':'Raised Bed'}
+        fields = ('store',
+                  'time',
+                  'gardensoil',
+                  'gardensoilpallets',
+                  'pottingmix',
+                  'pottingmixpallets',
+                  'raisedbed',
+                  'raisedbedpallets')
+        widgets = {
+            'gardensoilpallets':forms.TextInput(attrs={'size': '1'}),
+            'pottingmixpallets': forms.TextInput(attrs={'size': '1'}),
+            'raisedbedpallets': forms.TextInput(attrs={'size': '1'}),
+        }

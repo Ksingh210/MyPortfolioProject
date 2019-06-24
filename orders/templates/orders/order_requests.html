@@ -5,8 +5,6 @@
   <head>
     <title>Order Request</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
-
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -62,9 +60,9 @@
                 {% csrf_token %}
                 Store Number: <br>{{ form.store }} <br><br>
                 Time(mm/dd/yyyy): <br>{{ form.time }}<br><br>
-                {{ form.gardensoil }}  Garden Soil  <br>
-                {{ form.pottingmix }}  Potting Mix<br>
-                {{ form.raisedbed }}  Raised Bed<br>
+                {{ form.gardensoil }}  Garden Soil  - {{ form.gardensoilpallets }} pallets<br>
+                {{ form.pottingmix }}  Potting Mix  - {{ form.pottingmixpallets }} pallets<br>
+                {{ form.raisedbed }}  Raised Bed  - {{ form.raisedbedpallets }} pallets<br>
                 <br>
                 <input type="submit" value="Submit"/>
             </form>
