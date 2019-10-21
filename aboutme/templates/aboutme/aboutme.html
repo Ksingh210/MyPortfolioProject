@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <title>Kawaljit Singh</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'home' %}">KAWALJIT SINGH</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link" href="{% url 'projects' %}">Projects</a>
+              <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+              <a class="nav-item nav-link" href="https://www.linkedin.com/in/ksingh210/">LinkedIn</a>
+              <a class="nav-item nav-link" href="https://github.com/Ksingh210">Github</a>
+              <a class="nav-item nav-link active" href="{% url 'aboutme' %}">About</a>
+            </div>
+          </div>
+        </nav>
+    </header>
+<main role="main">
+</main>
+  <div class="jumbotron text-center">
+      <div class="container">
+          <div style="width: 100%; overflow: hidden;">
+              <div style="width: 600px; float: left;">
+                  <img src="{% static 'IMG_4081.jpg' %}" height="400"/>
+              </div>
+              <div style="margin-left: 600px; text-align: left;">
+                  <h2>ABOUT ME</h2>
+                  <p style="font-size:18px;">
+                  Software development is my passion! that's why I do it for fun!
+                  <br/>
+                  For a little over a year now I have been teaching myself how to program. Although I work a full time job as an Retail Program Analyst,
+                  I utilize my evenings, and weekends, to learn and work on projects. My main programming language is Python, but
+                  I am experienced in PHP, JavaScript, and the database language SQL.
+                  <br/>
+                  My full time job as a Retail Program Analyst never required me to learn any sort of programming language, not even SQL. However, I am always looking
+                  for opportunities to grow. Since learning Python, I have automated majority of my daily tasks and built a Graphical User Interface (GUI)
+                  to store, and execute, all of my programs at the click of a button.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div style="width: 100%;" class="container">
+      <div style="float: left; width: 33%;">
+          <h5 align="center">Analytics</h5>
+          <img src="{% static 'Analytics.png' %}" height="250" width="100%"/>
+      </div>
+      <div style="float: left; width: 33%;">
+          <h5 align="center">Programming</h5>
+          <img src="{% static 'coding.jfif' %}" height="250" width="100%"/>
+      </div>
+      <div style="float: left; width: 33%;">
+          <h5 align="center">Database Management</h5>
+          <img src="{% static 'database.png' %}" height="250" width="100%"/>
+      </div>
+  <br style="clear: left;"/>
+  </div>
+</body>
+<br/>
+<footer class="text-muted">
+  <div align="right">
+    <p> © Kawaljit Singh {% now "Y" %}</p>
+   </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
